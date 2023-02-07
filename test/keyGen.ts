@@ -1,7 +1,7 @@
 import { AuthChecker, AuthKeyGen } from '../index';
 
-const apiSecret = 'movn';
-const authServices = ['movn-apollo'];
+const apiSecret = 'animal-arclight-2023';
+const authServices = ['animal-front'];
 
 const keyGenerator = new AuthKeyGen(apiSecret,authServices);
 

@@ -10,8 +10,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const index_1 = require("../index");
-const apiSecret = 'movn';
-const authServices = ['movn-apollo'];
+const apiSecret = 'animal-arclight-2023';
+const authServices = ['animal-front'];
 const keyGenerator = new index_1.AuthKeyGen(apiSecret, authServices);
 const main = (() => __awaiter(void 0, void 0, void 0, function* () {
     console.log(keyGenerator.generateKeys());

@@ -10,20 +10,20 @@ A auth lib provides service to service authentication.
 
 Create .npmrc file on root directory, and use your Github access token
 ```
-@moving-analytics:registry=https://npm.pkg.github.com/
+@animal-high-tech:registry=https://npm.pkg.github.com/
 //npm.pkg.github.com/:_authToken=YOUR-GITHUB-ACCESS-TOKEN
 ```
 
 #### Step 2: Install the library to your project
 #####  Install from the command line:
 ```
-    npm install @moving-analytics/animal-service-auth
+    npm install @animal-high-tech/animal-service-auth
 ```
 
 #### OR
 #####  Install via package.json:
 ```
-    "@moving-analytics/animal-service-auth": "^1.1.0"
+    "@animal-high-tech/animal-service-auth": "^1.1.0"
 ```
 
 ### Usage
@@ -32,7 +32,7 @@ Create .npmrc file on root directory, and use your Github access token
 
 Typescript Example:
 ```
-import { AuthKeyGen } from '@moving-analytics/animal-service-auth';
+import { AuthKeyGen } from '@animal-high-tech/animal-service-auth';
 
 const apiSecret = 'animal';
 const authServices = ['animal-apollo'];
@@ -55,7 +55,7 @@ Use the generated token as a bearer token.
 
 ```
 
-import { AuthChecker } from '@moving-analytics/animal-service-auth';
+import { AuthChecker } from '@animal-high-tech/animal-service-auth';
 const apiSecret = 'animal';
 const authServices = ['animal-apollo'];
 const AuthCheckerMiddleware = new AuthChecker(apiSecret,authServices).build();
