@@ -1,4 +1,4 @@
-# Movn-Service-Auth
+# Animal-Service-Auth
 A auth lib provides service to service authentication.
 ### Install
 
@@ -17,13 +17,13 @@ Create .npmrc file on root directory, and use your Github access token
 #### Step 2: Install the library to your project
 #####  Install from the command line:
 ```
-    npm install @moving-analytics/movn-service-auth
+    npm install @moving-analytics/animal-service-auth
 ```
 
 #### OR
 #####  Install via package.json:
 ```
-    "@moving-analytics/movn-service-auth": "^1.1.0"
+    "@moving-analytics/animal-service-auth": "^1.1.0"
 ```
 
 ### Usage
@@ -32,10 +32,10 @@ Create .npmrc file on root directory, and use your Github access token
 
 Typescript Example:
 ```
-import { AuthKeyGen } from '@moving-analytics/movn-service-auth';
+import { AuthKeyGen } from '@moving-analytics/animal-service-auth';
 
-const apiSecret = 'movn';
-const authServices = ['movn-apollo'];
+const apiSecret = 'animal';
+const authServices = ['animal-apollo'];
 
 const keyGenerator = new AuthKeyGen(apiSecret,authServices);
 
@@ -43,7 +43,7 @@ console.log(keyGenerator.generateKeys());
 
 /*
     Map(1) {
-        'movn-apollo' => 'eyJhbGciOiJIUzI1NiJ9.bW92bi1hcG9sbG8.zqMTlPEBzJkPLr-fXQEuSXokiiZTyexGPQWLenh3qLk'
+        'animal-apollo' => 'eyJhbGciOiJIUzI1NiJ9.bW92bi1hcG9sbG8.zqMTlPEBzJkPLr-fXQEuSXokiiZTyexGPQWLenh3qLk'
     }
 */
 ```
@@ -55,9 +55,9 @@ Use the generated token as a bearer token.
 
 ```
 
-import { AuthChecker } from '@moving-analytics/movn-service-auth';
-const apiSecret = 'movn';
-const authServices = ['movn-apollo'];
+import { AuthChecker } from '@moving-analytics/animal-service-auth';
+const apiSecret = 'animal';
+const authServices = ['animal-apollo'];
 const AuthCheckerMiddleware = new AuthChecker(apiSecret,authServices).build();
 
 export default AuthCheckerMiddleware;
@@ -95,4 +95,3 @@ app.post('/test', AuthCheckerMiddleware, async(req: Request, res: Response, next
 
 ```
 
-# animal-service-auth
