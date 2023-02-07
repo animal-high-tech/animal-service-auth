@@ -1,6 +1,6 @@
 {
   "name": "animal-service-auth",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "A library provides service to service authentication",
   "main": "index.js",
   "scripts": {
